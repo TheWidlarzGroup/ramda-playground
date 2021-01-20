@@ -8,6 +8,19 @@ import Animated, {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
+import R from 'ramda';
+
+const testOnClick = (value: Animated.SharedValue<number>) => () =>
+  R.ifElse(
+    R.propEq('value', 0),
+    () => (value.value = withSpring(300)),
+    () => {
+      value.value = withTiming(0, {
+        duration: 666,
+        easing: Easing.circle,
+      });
+    },
+  )(value);
 
 const Test = () => {
   const test = useSharedValue(100);
@@ -23,14 +36,7 @@ const Test = () => {
   return (
     <View style={styles.container}>
       <Animated.View style={testStyle} />
-      <TouchableOpacity
-        onPress={() => {
-          if (test.value === 0) {
-            test.value = withSpring(200);
-          } else {
-            test.value = withTiming(0, {duration: 666, easing: Easing.circle});
-          }
-        }}>
+      <TouchableOpacity onPress={testOnClick(test)}>
         <Text>magic here</Text>
       </TouchableOpacity>
     </View>

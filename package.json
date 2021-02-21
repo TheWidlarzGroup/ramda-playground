@@ -1,13 +1,14 @@
 {
   "name": "RamdaPlay",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test-fastlane-android": "cd ./android && bundle exec fastlane android test"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",

@@ -37,7 +37,7 @@ const Test = () => {
     <View style={styles.container}>
       <Animated.View style={testStyle} />
       <TouchableOpacity onPress={testOnClick(test)}>
-        <Text>magic here</Text>
+        <Text>magic here test2</Text>
       </TouchableOpacity>
     </View>
   )

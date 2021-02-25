@@ -1,3 +1,6 @@
+// FIX For Reanimated Unit tests
+// https://github.com/software-mansion/react-native-reanimated/issues/1642#issuecomment-769048397
+
 /**
  * Reanimated 2
  */

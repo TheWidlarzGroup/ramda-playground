@@ -19,7 +19,7 @@
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.9.0",
-    "react-native-reanimated": "^2.0.0-rc.2",
+    "react-native-reanimated": "^2.0.0-rc.3",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.1",
     "@testing-library/react-native": "^7.1.0"
@@ -43,7 +43,7 @@
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-react-native-wcandillon": "^3.3.6",
-    "eslint-config-twg": "1.0.2",
+    "eslint-config-twg": "1.0.3",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",

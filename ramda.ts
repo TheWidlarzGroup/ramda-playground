@@ -1,3 +1,3 @@
-import * as R from 'ramda';
+import * as R from 'ramda'
 
-export default R;
+export default R

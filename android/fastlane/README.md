@@ -31,16 +31,16 @@ Increment build number and push to repository - Build number in this case is the
 fastlane android ivn
 ```
 Increment version number and push to repository - Version number in this case is the android version name
-### android alpha
-```
-fastlane android alpha
-```
-Build and push a new alpha build to the Play Store
 ### android build
 ```
 fastlane android build
 ```
 Build a version of the app
+### android alpha
+```
+fastlane android alpha
+```
+Build and push a new alpha build to the Play Store
 ### android beta
 ```
 fastlane android beta

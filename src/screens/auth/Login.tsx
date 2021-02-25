@@ -17,11 +17,11 @@ const Login = () => {
   const navigation = useNavigation<AuthNavigationType<'Login'>>()
 
   const navigateToSignup = () => {
-    navigation.push('Signup')
+    navigation.navigate('Signup')
   }
 
   const navigateToHomeScreen = () => {
-    navigation.push('Home')
+    navigation.navigate('Home')
   }
 
   return (

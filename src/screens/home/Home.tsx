@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const Home = ({}) => {
+const Home = () => {
   const navigation = useNavigation<HomeNavigationType<'Home'>>()
 
   const navigateToReanimatedTest = () => {

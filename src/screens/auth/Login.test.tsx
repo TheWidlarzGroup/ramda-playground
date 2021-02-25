@@ -15,7 +15,7 @@ describe('<Login/>', () => {
     expect(goToSignupButton).toBeTruthy()
   })
 
-  it('redirects to Signup correctly', async () => {
+  it('redirects to Signup correctly', () => {
     const { getByText } = render(<Login />)
     fireEvent.press(getByText(signupButtonText))
     expect(mockedNavigation).toHaveBeenCalledTimes(1)

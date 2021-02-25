@@ -26,9 +26,10 @@ export interface AuthNavigationProps<RouteName extends keyof AuthenticationRoute
  */
 
 // for useNavigation hook
-export type HomeNavigationType<
-  RouteName extends keyof HomeRoutes
-> = StackNavigationProp<HomeRoutes, RouteName>
+export type HomeNavigationType<RouteName extends keyof HomeRoutes> = StackNavigationProp<
+  HomeRoutes,
+  RouteName
+>
 
 export interface HomeNavigationProps<RouteName extends keyof HomeRoutes> {
   navigation: StackNavigationProp<HomeRoutes, RouteName>

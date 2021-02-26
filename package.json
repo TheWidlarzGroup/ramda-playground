@@ -8,7 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test-fastlane-android": "cd ./android && bundle exec fastlane android test"
+    "test-fastlane-android": "cd ./android && bundle exec fastlane android test",
+    "build-detox-android": "detox build -c android.emu.debug",
+    "test-detox-android": "detox test -c android.emu.debug"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",

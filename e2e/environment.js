@@ -21,6 +21,3 @@ class CustomDetoxEnvironment extends DetoxCircusEnvironment {
 }
 
 module.exports = CustomDetoxEnvironment
-
-// Detox setup tutorial
-// https://dev.to/jeevankishore/e2e-detox-react-native-161o

@@ -1,0 +1,38 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "android.emu.debug": {
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && ./gradlew app:assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Nexus_5X_API_29"
+      }
+    },
+    "android.emu.release": {
+      "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+      "build": "cd android && ./gradlew app:assembleRelease assembleAndroidTest -DtestBuildType=release && cd ..",
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Nexus_5X_API_29"
+      }
+    },
+    "ios.sim.release": {
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/RamdaPlay.app",
+      "build": "export CODE_SIGNING_REQUIRED=NO && export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/RamdaPlay.xcworkspace -UseModernBuildSystem=YES -arch x86_64 -scheme RamdaPlay -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet",
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "ios.sim.debug": {
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/RamdaPlay.app",
+      "build": "xcodebuild -workspace ios/RamdaPlay.xcworkspace -UseNewBuildSystem=NO -scheme RamdaPlay -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -quiet",
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 11"
+      }
+    }
+  }
+}

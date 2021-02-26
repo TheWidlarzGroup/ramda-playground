@@ -10,7 +10,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test-fastlane-android": "cd ./android && bundle exec fastlane android test",
     "build-detox-android": "detox build -c android.emu.release",
-    "test-detox-android": "detox test -c android.emu.release"
+    "test-detox-android": "detox test -c android.emu.release",
+    "build-detox-ios": "detox build -c ios.sim.release",
+    "test-detox-ios": "detox test -c ios.sim.release"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",

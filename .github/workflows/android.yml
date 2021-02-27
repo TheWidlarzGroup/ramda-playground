@@ -35,7 +35,7 @@ jobs:
 
       - name: Build for detox
         run: |
-          detox build -c android.emu.debug
+          yarn detox build -c android.emu.debug
       - name: Android Emulator
         timeout-minutes: 20
         continue-on-error: true
@@ -46,4 +46,4 @@ jobs:
           $ANDROID_HOME/platform-tools/adb devices
           echo "Emulator started"
       - name: Android Detox
-        run: yarn start & detox test -c android.emu.debug
+        run: yarn start & yarn detox test -c android.emu.debug

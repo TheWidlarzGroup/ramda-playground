@@ -9,10 +9,14 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test-fastlane-android": "cd ./android && bundle exec fastlane android test",
-    "build-detox-android": "detox build -c android.emu.debug",
-    "test-detox-android": "detox test -c android.emu.debug",
+    "build-detox-ios:local": "detox build -c ios.sim.releaseLocal -l verbose", 
+    "test-detox-ios:local": "detox test -c ios.sim.releaseLocal -l verbose",
     "build-detox-ios": "detox build -c ios.sim.release",
-    "test-detox-ios": "detox test -c ios.sim.release"
+    "test-detox-ios": "detox test -c ios.sim.release",
+    "build-detox-android:local": "detox build -c android.emu.release -l verbose",
+    "test-detox-android:local": "detox test -c android.emu.release -l verbose",
+    "build-detox-android": "detox build -c android.emu.debug",
+    "test-detox-android": "detox test -c android.emu.debug"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",

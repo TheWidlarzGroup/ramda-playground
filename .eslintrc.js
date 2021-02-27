@@ -6,6 +6,7 @@ module.exports = {
     waitFor: false,
     element: false,
     by: false,
+    jasmine: false,
   },
   extends: [
     '@react-native-community',

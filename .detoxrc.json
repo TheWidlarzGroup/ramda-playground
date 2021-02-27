@@ -17,10 +17,10 @@
     },
     "ios.sim.release": {
       "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/RamdaPlay.app",
-      "build": "xcodebuild -workspace ios/RamdaPlay.xcworkspace -scheme RamdaPlay -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+      "build": "export CODE_SIGNING_REQUIRED=NO && xcodebuild -workspace ios/RamdaPlay.xcworkspace -UseModernBuildSystem=YES -arch x86_64 -scheme RamdaPlay -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
       "type": "ios.simulator",
       "device": {
-        "type": "iPhone 8"
+        "type": "iPhone 11"
       }
     },
     "ios.sim.debug": {

@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 25
 
     env:
-      DEVELOPER_DIR: /Applications/Xcode_11.2.app
+      DEVELOPER_DIR: /Applications/Xcode_12.4.app
 
     steps:
       - name: Checkout
@@ -47,5 +47,5 @@ jobs:
           cd ios && pod install && cd ..
       - run: brew tap wix/brew
       - run: brew install applesimutils
-      - run: yarn detox build e2e --configuration ios.sim.debug
-      - run: yarn detox test e2e --configuration ios.sim.debug --cleanup --debug-synchronization 200
+      - run: yarn detox build e2e --configuration ios.sim.releaseLocal
+      - run: yarn detox test e2e --configuration ios.sim.releaseLocal --cleanup --debug-synchronization 200

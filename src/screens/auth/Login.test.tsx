@@ -9,7 +9,7 @@ describe('<Login/>', () => {
   beforeEach(() => {
     jest.clearAllMocks()
   })
-  it('has signup button', () => {
+  it('has the signup button', () => {
     const { getByText } = render(<Login />)
     const goToSignupButton = getByText(signupButtonText)
     expect(goToSignupButton).toBeTruthy()

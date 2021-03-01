@@ -64,6 +64,8 @@
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
+    "coverageReporters": ["html", "lcov"],
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ],

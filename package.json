@@ -1,6 +1,6 @@
 {
   "name": "RamdaPlay",
-  "version": "0.0.9",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -8,26 +8,28 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test-fastlane-android": "cd ./android && bundle exec fastlane android test"
+    "test-fastlane-android": "cd ./android && bundle exec fastlane android test",
+    "build-detox-ios": "detox build -c ios.sim.release",
+    "test-detox-ios": "detox test -c ios.sim.release",
+    "build-detox-android": "detox build -c android.emu.release -l verbose",
+    "test-detox-android": "detox test -c android.emu.release -l verbose"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.0",
     "@react-navigation/stack": "^5.13.0",
-    "@testing-library/jest-native": "^3.4.3",
     "ramda": "^0.27.1",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-reanimated": "^2.0.0-rc.3",
     "react-native-safe-area-context": "^3.1.9",
-    "react-native-screens": "^2.15.1",
-    "@testing-library/react-native": "^7.1.0"
+    "react-native-screens": "^2.15.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
-    "@react-native-community/eslint-config": "^1.1.0", 
+    "@react-native-community/eslint-config": "^1.1.0",
     "@twgdev/prettier-config": "^1.0.2",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.25",
@@ -38,12 +40,13 @@
     "@typescript-eslint/parser": "^4.15.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.1.0",
+    "detox": "^18.6.2",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-react-native-wcandillon": "^3.3.6",
-    "eslint-config-twg": "1.0.3",
+    "eslint-config-twg": "1.0.4",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -55,7 +58,9 @@
     "prettier": "^2.2.1",
     "react-test-renderer": "16.13.1",
     "ts-jest": "^26.5.2",
-    "typescript": "^4.1.4"
+    "typescript": "^4.1.4",
+    "@testing-library/jest-native": "^3.4.3",
+    "@testing-library/react-native": "^7.1.0"
   },
   "jest": {
     "preset": "react-native",
@@ -73,6 +78,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "testPathIgnorePatterns" : [
+      "<rootDir>/e2e" 
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",

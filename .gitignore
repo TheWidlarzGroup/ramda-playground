@@ -64,3 +64,6 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 /ios/RamdaPlay.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+# Tests
+/coverage

@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { Pressable, StyleSheet, Text } from 'react-native'
+import { Pressable, StyleSheet, Text, Image } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { AuthNavigationType } from '../../navigation/Navigation'
 
@@ -10,6 +10,11 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     margin: 30,
     backgroundColor: 'salmon',
+    width: '90%',
+  },
+  container: {
+    flex: 1,
+    alignItems: 'center',
   },
 })
 
@@ -25,7 +30,7 @@ const Login = () => {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Text>Login</Text>
       <Pressable onPress={navigateToHomeScreen} style={styles.button}>
         <Text>Go to Home Screen</Text>
@@ -33,6 +38,7 @@ const Login = () => {
       <Pressable onPress={navigateToSignup} style={styles.button}>
         <Text>Go to Signup</Text>
       </Pressable>
+      <Image source={require('../../assets/RamdaLogo.png')} resizeMode="contain" />
     </SafeAreaView>
   )
 }

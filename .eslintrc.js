@@ -8,5 +8,5 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  ignorePatterns: ['assetsTransformer.js', 'metro.config.js', '.eslintrc.js', 'babel.config.js'],
+  ignorePatterns: ['/coverage'],
 }

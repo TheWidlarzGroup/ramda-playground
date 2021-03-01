@@ -31,9 +31,8 @@ const Home = () => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Welcome to</Text>
       <Text style={styles.title}>Ramda Playground</Text>
-      <Text>Login</Text>
       <Pressable onPress={navigateToReanimatedTest} style={styles.button}>
-        <Text>Go to Home Screen</Text>
+        <Text>Go to Animation</Text>
       </Pressable>
     </SafeAreaView>
   )

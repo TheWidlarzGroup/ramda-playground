@@ -1,6 +1,6 @@
 {
   "name": "RamdaPlay",
-  "version": "0.0.9",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -46,7 +46,7 @@
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-react-native-wcandillon": "^3.3.6",
-    "eslint-config-twg": "1.0.3",
+    "eslint-config-twg": "1.0.4",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -78,6 +78,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "testPathIgnorePatterns" : [
+      "<rootDir>/e2e" 
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",

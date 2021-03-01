@@ -4,6 +4,6 @@ describe('Example', () => {
   })
 
   it('should have description text on welcome screen', async () => {
-    await expect(element(by.id('desc-text'))).toBeVisible()
+    await expect(element(by.text('Login'))).toBeVisible()
   })
 })

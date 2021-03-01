@@ -3156,10 +3156,10 @@ eslint-config-react-native-wcandillon@^3.3.6:
     eslint-plugin-import "^2.22.1"
     typescript "^4.1.3"
 
-eslint-config-twg@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-twg/-/eslint-config-twg-1.0.3.tgz#5e1d19a068a14441c26400814e78166d710fe659"
-  integrity sha512-m2iGXtqz5SnEFBW5uyzbaODjoX2seX2Wd7MPhO4JSUPl02OggNvPac9wR82922wgaVuQsYAIlnHpxlIYvZJ5JQ==
+eslint-config-twg@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-twg/-/eslint-config-twg-1.0.4.tgz#613e76c93859619ae57ceb09015a5754d5400846"
+  integrity sha512-qCVfmt1fvfVtrbwAAb+kT7mjLFn4LszkEycqBj0q2/Mt0YZnLmYBg8GSyFRN0pCLRf673d4X53egr0T3oi93ng==
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"

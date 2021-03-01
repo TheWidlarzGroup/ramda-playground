@@ -10,7 +10,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: yarn
-        run: yarn
+      - uses: c-hive/gha-yarn-cache@v1
+      - name: Install node modules
+        run: |
+          yarn install
       - name: lint
         run: yarn lint
+      - name: type-check
+        run: yarn type-check

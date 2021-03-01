@@ -9,7 +9,9 @@
   "compilerOptions": {
     "jsx": "react",
     "typeRoots": ["node_modules/@types"],
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "skipLibCheck": true,
+    "sourceMap": true,
   },
 }
  

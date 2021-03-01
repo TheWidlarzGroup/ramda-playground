@@ -10,7 +10,8 @@
     "jsx": "react",
     "typeRoots": ["node_modules/@types"],
     "types": ["jest", "node"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "sourceMap": true,
   },
 }
  

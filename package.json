@@ -8,6 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --config .prettierrc --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "type-check": "tsc --noEmit",
     "test-fastlane-android": "cd ./android && bundle exec fastlane android test",
     "build-detox-ios": "detox build -c ios.sim.release",
     "test-detox-ios": "detox test -c ios.sim.release",
@@ -64,6 +66,8 @@
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
+    "coverageReporters": ["html", "lcov"],
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ],
@@ -80,7 +84,8 @@
       "node"
     ],
     "testPathIgnorePatterns" : [
-      "<rootDir>/e2e" 
+      "<rootDir>/e2e",
+      "<rootDir>/assetsTransformer.js"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
